@@ -27,15 +27,12 @@ EMAIL_CONFIG = {
 
 # List of Campaign Names
 CAMPAIGN_NAMES = [
-    "VAN_NOT_REACHED_KANNADA", "TRIP_NOT_START_HINDI", "BROADCAST_Tamil",
-    "VAN_NOT_REACHED_TAMIL", "BROADCAST_Telugu", "Broadcasting",
-    "VAN_NOT_REACHED_TELUGU", "Broadcast_Registration", "BROADCAST_Kannada",
-    "BroadcastingTripStart", "Broadcasting_Ticket_Not_Closed", "VAN_NOT_REACHED_MALAYALAM",
-    "VAN_Not_Reached_TELUGU", "Vecv_Registration", "TRIP_NOT_START_KANNADA",
-    "TRIP_NOT_START_TELUGU", "TRIP_NOT_START_TAMIL", "VAN_NOT_REACHED_HINDI",
-    "broadcast_trip_end_2", "Broadcasting_VAN_Not_Reached", "TICKET_NOT_CLOSED_KANNADA",
-    "TICKET_NOT_CLOSED_TELUGU", "TRIP_NOT_START_MALAYALAM", "TICKET_NOT_CLOSED_MALAYALAM",
-    "BROADCAST_malayalam", "TICKET_NOT_CLOSED_TAMIL"
+    "Broadcasting2", "TRIP_NOT_START_HINDI", "VAN_NOT_REACHED_HINDI",
+    "VAN_NOT_REACHED_TAMIL", "TRIP_NOT_START_KANNADA", "VAN_NOT_REACHED_MALAYALAM",
+    "BROADCAST_Telugu", "VAN_NOT_REACHED_TELUGU", "Broadcasting_Ticket_Not_Closed",
+    "BROADCAST_Kannada", "BROADCAST_malayalam", "VAN_NOT_REACHED_KANNADA",
+    "TRIP_NOT_START_MALAYALAM", "TRIP_NOT_START_TELUGU", "BROADCAST_Tamil",
+    "TRIP_NOT_START_TAMIL", "broadcast_trip_end_2"
 ]
 
 # Function to Check Dialing Status
