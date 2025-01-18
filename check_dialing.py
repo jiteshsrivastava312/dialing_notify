@@ -22,7 +22,7 @@ EMAIL_CONFIG = {
     'smtp_server': 'smtp.gmail.com',
     'smtp_port': 587,
     'username': 'jitesh@avissupport.com',
-    'password': 'khushi@!$#'
+    'password': 'wlfh jfbp czhu kutg'
 }
 
 # List of Campaign Names
