@@ -15,14 +15,14 @@ DB_CONFIG = {
 
 # Email Configuration
 EMAIL_CONFIG = {
-    'from_email': 'cogent656@gmail.com',
+    'from_email': 'jitesh@avissupport.com',
     'to_email': [
         'rohit.shrivastava@cogenteservices.com'
     ],
     'smtp_server': 'smtp.gmail.com',
     'smtp_port': 587,
-    'username': 'cogent656@gmail.com',
-    'password': 'mfadmyczyevfkpfl'
+    'username': 'jitesh@avissupport.com',
+    'password': 'khushi@!$#'
 }
 
 # List of Campaign Names
