@@ -54,17 +54,26 @@ def check_dialing_status(campaign_name):
         print(f"Database error for campaign {campaign_name}: {e}")
         return False
 
-# Function to Send Email Alert
-def send_email_alert(campaign_name):
+# Function to Send Consolidated Email Alert
+
+def send_email_alert(campaigns_without_dialing):
+    if not campaigns_without_dialing:
+        print("No campaigns without dialing. No email sent.")
+        return
+
     try:
         msg = MIMEMultipart()
         msg['From'] = EMAIL_CONFIG['from_email']
         msg['To'] = ', '.join(EMAIL_CONFIG['to_email'])
-        msg['Subject'] = f'Dialing Alert: No activity detected in {campaign_name}'
+        msg['Subject'] = 'Dialing Alert: Campaigns without activity in the last 30 minutes'
 
-        # Email Body
+        # Create Email Body
+        campaign_list = "\n".join(campaigns_without_dialing)
         body = f"""
-        Alert! No numbers have been dialed in the campaign "{campaign_name}" for the last 30 minutes.
+        Alert! No numbers have been dialed in the following campaigns for the last 30 minutes:
+        
+        {campaign_list}
+
         Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
         """
         msg.attach(MIMEText(body, 'plain'))
@@ -76,16 +85,20 @@ def send_email_alert(campaign_name):
         server.send_message(msg)
         server.quit()
 
-        print(f"Email alert sent successfully for campaign: {campaign_name}.")
+        print("Consolidated email alert sent successfully.")
     except Exception as e:
-        print(f"Email error for campaign {campaign_name}: {e}")
-
+        print(f"Email error: {e}")
+        
 # Main Function
 def main():
+    campaigns_without_dialing = []
     for campaign in CAMPAIGN_NAMES:
         dialing_status = check_dialing_status(campaign)
         if not dialing_status:
-            send_email_alert(campaign)
+            campaigns_without_dialing.append(campaign)
+
+# Send Consolidated Email
+send_email_alert(campaigns_without_dialing)
 
 if __name__ == "__main__":
     main()
