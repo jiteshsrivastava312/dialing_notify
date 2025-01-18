@@ -55,7 +55,6 @@ def check_dialing_status(campaign_name):
         return False
 
 # Function to Send Consolidated Email Alert
-
 def send_email_alert(campaigns_without_dialing):
     if not campaigns_without_dialing:
         print("No campaigns without dialing. No email sent.")
@@ -88,17 +87,18 @@ def send_email_alert(campaigns_without_dialing):
         print("Consolidated email alert sent successfully.")
     except Exception as e:
         print(f"Email error: {e}")
-        
+
 # Main Function
 def main():
     campaigns_without_dialing = []
+
     for campaign in CAMPAIGN_NAMES:
         dialing_status = check_dialing_status(campaign)
         if not dialing_status:
             campaigns_without_dialing.append(campaign)
 
-# Send Consolidated Email
-send_email_alert(campaigns_without_dialing)
+    # Send Consolidated Email
+    send_email_alert(campaigns_without_dialing)
 
 if __name__ == "__main__":
     main()
