@@ -17,7 +17,7 @@ DB_CONFIG = {
 EMAIL_CONFIG = {
     'from_email': 'jitesh@avissupport.com',
     'to_email': [
-        'rohit.shrivastava@cogenteservices.com'
+        'anam.siddiqui@cogenteservices.com'
     ],
     'smtp_server': 'smtp.gmail.com',
     'smtp_port': 587,
